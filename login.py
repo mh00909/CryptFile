@@ -23,7 +23,6 @@ class LoginDialog(QDialog):
         title_label.setAlignment(Qt.AlignCenter)
         layout.addWidget(title_label)
 
-        # Tworzymy pola wejściowe i dodajemy je do layoutu
         username_container, self.username_input = self.create_input_field("Nazwa użytkownika:")
         password_container, self.password_input = self.create_input_field("Hasło:", password=True)
 
@@ -44,7 +43,6 @@ class LoginDialog(QDialog):
 
 
     def create_input_field(self, label_text, password=False):
-        """Funkcja pomocnicza do tworzenia pól wejściowych"""
         container = QWidget()
         layout = QVBoxLayout()
         label = QLabel(label_text)
@@ -62,7 +60,7 @@ class LoginDialog(QDialog):
         layout.addWidget(input_field)
         container.setLayout(layout)
 
-        return container, input_field  # 🛠️ Zwracamy zarówno widget kontenerowy, jak i pole input
+        return container, input_field  
 
 
     def handle_login(self):
@@ -77,7 +75,7 @@ class LoginDialog(QDialog):
         self.username = username
         self.salt = salt
         QMessageBox.information(self, "Sukces", "Zalogowano pomyślnie!")
-        self.crypt_app = CryptFileApp(self.username, self.salt)  # Tworzymy okno aplikacji
+        self.crypt_app = CryptFileApp(self.username, self.salt)  
         self.crypt_app.show()
         self.accept()
 
