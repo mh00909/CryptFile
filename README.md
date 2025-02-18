@@ -54,7 +54,7 @@ python database.py
 ```
 python main.py
 ```
-### Usage
+## Usage
 1. Register a new account 
 - Enter an email, username, and password.
 - Verify your email using the 2FA code sent to your inbox.
@@ -74,7 +74,7 @@ python main.py
 - Encrypt all files in a directory recursively.
 - Retain or delete original files after encryption.
 
-### Technologies Used
+## Technologies Used
 - Python 3.10+
 - PyQt5 – GUI framework
 - cryptography – Encryption (AES-GCM, Fernet)
@@ -82,6 +82,7 @@ python main.py
 - smtplib & email – Email verification via SMTP
 - dotenv – Secure environment variable management
 
-### Screenshots
+## Screenshots
 ![image](https://github.com/user-attachments/assets/a2506247-c141-4396-a5fb-49e0246ace3d)
+
 ![image](https://github.com/user-attachments/assets/0b14d409-a90b-4e9e-845b-b8e7feaa56ad)
